@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Erefa O. Juliet — Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#0097A7; /* teal */
+      --accent-hover:#007C91;
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --card:#fbfcfd;
+      --shadow: 0 6px 18px rgba(12,20,23,0.06);
+      --radius:12px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    body{margin:0;background:#f5f7f8;color:#0f172a;line-height:1.5}
+    .container{max-width:980px;margin:36px auto;padding:24px}
+
+    /* header */
+    .header{background:linear-gradient(90deg,var(--accent),#00ACC1);border-radius:14px;color:white;padding:28px;display:flex;gap:20px;align-items:center}
+    .photo{width:120px;height:120px;border-radius:999px;overflow:hidden;flex:0 0 120px;box-shadow:0 6px 18px rgba(2,6,23,0.15);border:4px solid rgba(255,255,255,0.12)}
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .intro{flex:1}
+    .name{font-size:1.6rem;font-weight:700;margin:0}
+    .title{margin:6px 0 14px;color:rgba(255,255,255,0.95);font-weight:500}
+    .about{color:rgba(255,255,255,0.92);margin-bottom:14px}
+    .cv-btn{display:inline-block;background:white;color:var(--accent);padding:10px 14px;border-radius:10px;font-weight:600;text-decoration:none}
+
+    /* projects */
+    h2.section{margin:28px 0 12px;color:#083344}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .card{background:var(--card);box-shadow:var(--shadow);border-radius:var(--radius);padding:18px}
+    .card h3{margin:0 0 8px;color:var(--accent-hover)}
+    .meta{color:var(--muted);font-size:0.9rem;margin-bottom:10px}
+    .insight{background:#f8fafb;border-radius:8px;padding:10px;margin:12px 0;color:#0f172a;font-size:0.95rem}
+    .card-buttons{display:flex;gap:10px;margin-top:10px}
+    .btn{padding:8px 12px;border-radius:8px;border:1px solid #e6eef0;background:#fafbfb;color:var(--muted);text-decoration:none;font-weight:600;font-size:0.95rem}
+    .btn:hover{background:#f2f7f7;border-color:var(--accent);color:var(--accent)}
+    .btn-download{background:var(--muted);color:white;border:none}
+    .btn-download:hover{background:var(--accent)}
+
+    /* responsive */
+    @media (max-width:860px){
+      .projects{grid-template-columns:1fr}
+      .header{flex-direction:column;align-items:flex-start}
+      .photo{width:96px;height:96px}
+    }
+
+    /* contact */
+    .contact{display:flex;gap:12px;align-items:center;margin-top:22px}
+    .contact a{color:var(--muted);text-decoration:none;font-weight:600}
+    footer{margin-top:34px;text-align:center;color:var(--muted);font-size:0.9rem}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header / Banner -->
+    <header class="header">
+      <div class="photo">
+        <!-- Replace profile.jpg with your image filename when uploading -->
+        <img src="profile.jpg" alt="Erefa O. Juliet" />
+      </div>
+      <div class="intro">
+        <h1 class="name">Erefa Oyeindiepreye Juliet</h1>
+        <div class="title">Data Analyst | SQL | Python | Power BI | Excel</div>
+        <p class="about">I am a data analyst passionate about uncovering insights through data cleaning, analysis, and visualization. I enjoy transforming raw data into actionable insights that drive informed business decisions.</p>
+        <a class="cv-btn" href="Erefa%20Juliet%E2%80%99s%20Resume.pdf" target="_blank" rel="noopener">📄 View CV</a>
+      </div>
+    </header>
+
+    <!-- Projects -->
+    <section>
+      <h2 class="section">Projects</h2>
+      <div class="projects">
+
+        <div class="card">
+          <h3>Retail Sales Analysis (SQL + Power BI)</h3>
+          <div class="meta">Tools: MySQL Workbench, Power BI</div>
+          <p>Performed data cleaning and exploratory analysis on a retail sales dataset using SQL, then visualized sales performance, top customers, and category trends in Power BI.</p>
+          <div class="insight"><strong>Insights:</strong> The analysis revealed that total sales were driven mainly by the <strong>Electronics</strong> and <strong>Clothing</strong> categories. Female customers aged 25–40 made the highest number of purchases; weekend sales peak; and returning customers contribute significantly to revenue.</div>
+          <div class="card-buttons">
+            <a class="btn" href="https://github.com/juliet-erefa/juliet-erefa.github.io/tree/main" target="_blank">View on GitHub</a>
+            <a class="btn btn-download" href="https://github.com/juliet-erefa/juliet-erefa.github.io/raw/main/Retail_Sales_Visuals.pbix" target="_blank">📥 Download File</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>World Layoffs Analysis (SQL)</h3>
+          <div class="meta">Tools: MySQL Workbench</div>
+          <p>Cleaned and analyzed a global layoffs dataset to uncover trends across companies, industries, and countries.</p>
+          <div class="insight"><strong>Insights:</strong> The dataset showed an increase in layoffs between 2020–2023, with tech and startups the most affected. The United States recorded the highest number of layoffs. This highlights the need for better workforce planning.</div>
+          <div class="card-buttons">
+            <a class="btn" href="https://github.com/juliet-erefa/juliet-erefa.github.io/blob/main/Data%20Cleaning%20(World%20Layoffs).sql" target="_blank">View on GitHub</a>
+            <a class="btn btn-download" href="https://github.com/juliet-erefa/juliet-erefa.github.io/raw/main/Data%20Cleaning%20(World%20Layoffs).sql" target="_blank">📥 Download File</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Data Professionals Survey (Power BI)</h3>
+          <div class="meta">Tools: Power BI</div>
+          <p>Analyzed a survey dataset to uncover insights on salaries, work-life balance, and job satisfaction among data professionals.</p>
+          <div class="insight"><strong>Insights:</strong> Python, SQL, and Power BI are among the most commonly used tools; more experienced respondents generally earn higher salaries; and the United States had the largest respondent base.</div>
+          <div class="card-buttons">
+            <a class="btn" href="https://github.com/juliet-erefa/juliet-erefa.github.io/tree/main" target="_blank">View on GitHub</a>
+            <a class="btn btn-download" href="https://github.com/juliet-erefa/juliet-erefa.github.io/raw/main/Power%20Bi%20Project.pbix" target="_blank">📥 Download File</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Airline Passenger Satisfaction (Python + Power BI)</h3>
+          <div class="meta">Tools: Python, Power BI</div>
+          <p>Cleaned and analyzed airline passenger data to determine factors influencing customer satisfaction.</p>
+          <div class="insight"><em>Coming soon – full analysis and download will be available here.</em></div>
+          <div class="card-buttons">
+            <a class="btn" href="https://github.com/juliet-erefa/juliet-erefa.github.io/tree/main" target="_blank">View on GitHub</a>
+            <a class="btn" style="opacity:0.45;pointer-events:none;">📥 Coming soon</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section style="margin-top:22px">
+      <h2 class="section">Contact</h2>
+      <div class="card" style="display:flex;align-items:center;gap:18px;flex-direction:column;text-align:center">
+        <div class="contact">
+          <a href="mailto:julieterefa@gmail.com">✉️ julieterefa@gmail.com</a>
+        </div>
+        <div class="contact">
+          <a href="https://www.linkedin.com/in/oyeindiepreye-erefa-928b8619b" target="_blank">💼 LinkedIn</a>
+          <span style="width:12px;display:inline-block"></span>
+          <a href="https://github.com/juliet-erefa" target="_blank">💻 GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Erefa Oyeindiepreye Juliet | Last updated: October 2025</p>
+    </footer>
+
+  </div>
+</body>
+</html>
