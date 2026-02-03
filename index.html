@@ -1,332 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Erefa O. Juliet — Data Analyst Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --accent:#0097A7; /* teal */
-      --accent-hover:#007C91;
-      --muted:#6b7280;
-      --bg:#ffffff;
-      --card:#fbfcfd;
-      --shadow: 0 6px 18px rgba(12,20,23,0.06);
-      --radius:12px;
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-    body{margin:0;background:#f5f7f8;color:#0f172a;line-height:1.5}
-    .container{max-width:980px;margin:36px auto;padding:24px}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erefa O. Juliet | Data Analyst Portfolio</title>
 
-    /* header */
-    .header{background:linear-gradient(90deg,var(--accent),#00ACC1);border-radius:14px;color:white;padding:28px;display:flex;gap:20px;align-items:center}
-    .photo{width:120px;height:120px;border-radius:999px;overflow:hidden;flex:0 0 120px;box-shadow:0 6px 18px rgba(2,6,23,0.15);border:4px solid rgba(255,255,255,0.12)}
-    .photo img{width:100%;height:100%;object-fit:cover;display:block}
-    .intro{flex:1}
-    .name{font-size:1.6rem;font-weight:700;margin:0}
-    .title{margin:6px 0 14px;color:rgba(255,255,255,0.95);font-weight:500}
-    .about{color:rgba(255,255,255,0.92);margin-bottom:14px}
-    .cv-btn{display:inline-block;background:white;color:var(--accent);padding:10px 14px;border-radius:10px;font-weight:600;text-decoration:none}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    /* projects */
-    h2.section{margin:28px 0 12px;color:#083344}
-    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    .card{background:var(--card);box-shadow:var(--shadow);border-radius:var(--radius);padding:18px}
-    .card h3{margin:0 0 8px;color:var(--accent-hover)}
-    .meta{color:var(--muted);font-size:0.9rem;margin-bottom:10px}
-    .insight{background:#f8fafb;border-radius:8px;padding:10px;margin:12px 0;color:#0f172a;font-size:0.95rem}
-    .card-buttons{display:flex;gap:10px;margin-top:10px}
-    .btn{padding:8px 12px;border-radius:8px;border:1px solid #e6eef0;background:#fafbfb;color:var(--muted);text-decoration:none;font-weight:600;font-size:0.95rem}
-    .btn:hover{background:#f2f7f7;border-color:var(--accent);color:var(--accent)}
-    .btn-download{background:var(--muted);color:white;border:none}
-    .btn-download:hover{background:var(--accent)}
+<style>
+:root{
+  --accent:#0097A7;
+  --accent-hover:#007C91;
+  --bg:#f5f7f8;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --shadow:0 8px 24px rgba(0,0,0,0.06);
+  --radius:14px;
+}
 
-    /* responsive */
-    @media (max-width:860px){
-      .projects{grid-template-columns:1fr}
-      .header{flex-direction:column;align-items:flex-start}
-      .photo{width:96px;height:96px}
-    }
+body{
+  margin:0;
+  font-family:Inter, system-ui;
+  background:var(--bg);
+  color:#0f172a;
+}
 
-    /* contact */
-    .contact{display:flex;gap:12px;align-items:center;margin-top:22px}
-    .contact a{color:var(--muted);text-decoration:none;font-weight:600}
-    footer{margin-top:34px;text-align:center;color:var(--muted);font-size:0.9rem}
+.container{
+  max-width:1100px;
+  margin:40px auto;
+  padding:20px;
+}
 
-  </style>
+header{
+  background:linear-gradient(90deg,var(--accent),#00ACC1);
+  border-radius:18px;
+  padding:30px;
+  color:white;
+  display:flex;
+  gap:24px;
+  align-items:center;
+}
+
+.photo{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  overflow:hidden;
+  border:4px solid rgba(255,255,255,0.25);
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+h1{margin:0;font-size:1.8rem}
+.title{margin:6px 0 12px;font-weight:500}
+
+.cv-btn{
+  display:inline-block;
+  background:white;
+  color:var(--accent);
+  padding:10px 16px;
+  border-radius:10px;
+  font-weight:600;
+  text-decoration:none;
+}
+
+.section-title{
+  margin:40px 0 16px;
+  font-size:1.4rem;
+  color:#083344;
+}
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:24px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:20px;
+}
+
+.card h3{
+  margin:0 0 6px;
+  color:var(--accent-hover);
+}
+
+.meta{
+  font-size:0.9rem;
+  color:var(--muted);
+  margin-bottom:10px;
+}
+
+details summary{
+  cursor:pointer;
+  font-weight:600;
+  margin:12px 0;
+}
+
+.btns{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+
+.btn{
+  padding:8px 14px;
+  border-radius:8px;
+  border:1px solid #e6eef0;
+  background:#fafbfb;
+  text-decoration:none;
+  color:#374151;
+  font-weight:600;
+}
+
+.btn:hover{
+  background:#f2f7f7;
+  border-color:var(--accent);
+  color:var(--accent);
+}
+
+.download{
+  background:var(--accent);
+  color:white;
+  border:none;
+}
+
+footer{
+  margin:50px 0 20px;
+  text-align:center;
+  color:var(--muted);
+  font-size:0.9rem;
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
+<div class="container">
 
-    <!-- Header / Banner -->
-    <header class="header">
-      <div class="photo">
-        <!-- Replace profile.jpg with your image filename when uploading -->
-        <img src="profile.jpg" alt="Erefa O. Juliet" />
-      </div>
-      <div class="intro">
-        <h1 class="name">Erefa Oyeindiepreye Juliet</h1>
-        <div class="title">Data Analyst | SQL | Python | Power BI | Excel</div>
-        <p class="about">I am a data analyst focused on solving business and operational problems through data-driven insights. I specialize in transforming raw data into clear analyses and visualizations that support decision-making, improve efficiency, and enhance customer experience.</p>
-        <a class="cv-btn" href="Erefa_Juliet_Resume.pdf" target="_blank" rel="noopener">
-  📄 View CV
-</a>
-      </div>
-    </header>
+<header>
+  <div class="photo">
+    <img src="profile.jpg" alt="Erefa Juliet">
+  </div>
+  <div>
+    <h1>Erefa Oyeindiepreye Juliet</h1>
+    <div class="title">Data Analyst | SQL | Python | Power BI | Excel</div>
+    <p>I analyze data to uncover insights that support business decisions, improve operations, and enhance customer experience.</p>
+    <a class="cv-btn" href="Erefa_Juliet_Resume.pdf" target="_blank">📄 View CV</a>
+  </div>
+</header>
 
-    <!-- Projects -->
-    <section>
-      <h2 class="section">Projects</h2>
-      <div class="projects">
+<h2 class="section-title">Projects</h2>
 
+<div class="projects">
+
+<!-- Airline -->
 <div class="card">
-  <h3>Analyzing the Operational and Cost Impact of Flight Delays on Passenger Satisfaction</h3>
-  <div class="meta">Tools: Python, Power BI</div>
+<img src="images/airline_dashboard.png">
+<div class="card-content">
+<h3>Airline Passenger Satisfaction Analysis</h3>
+<div class="meta">Python • Power BI</div>
+<p>Analyzed airline passenger data to understand how delays and service quality impact satisfaction.</p>
 
-  <p>
-    This project analyzes airline passenger data to understand how flight delays and service quality
-    affect customer satisfaction and operational performance.
-  </p>
+<details>
+<summary>View details</summary>
+<ul>
+<li>Business travelers showed higher expectations and sharper dissatisfaction during delays.</li>
+<li>WiFi quality and seat comfort strongly influenced satisfaction.</li>
+<li>Delay reduction and service improvements were recommended.</li>
+</ul>
+</details>
 
-  <div class="problem-context">
-    <strong>Problem Context:</strong>
-    Airlines face high operational costs and declining customer satisfaction due to frequent flight delays
-    and service quality challenges. Understanding how different passenger segments respond to delays
-    is essential for improving operational efficiency and customer experience.
-  </div>
-
-  <div class="business-questions">
-    <strong>Business Questions:</strong>
-    <ul>
-      <li>How do flight delays impact overall passenger satisfaction?</li>
-      <li>Do business-class and economy passengers respond differently to delays?</li>
-      <li>Which service quality factors most strongly influence dissatisfaction during delayed flights?</li>
-    </ul>
-  </div>
-
-  <div class="approach">
-    <strong>Approach:</strong>
-    <ul>
-      <li>Cleaned and prepared airline passenger data using Python.</li>
-      <li>Analyzed delay patterns and satisfaction scores across travel classes.</li>
-      <li>Evaluated service factors such as WiFi quality, seat comfort, and inflight services.</li>
-      <li>Visualized key trends and findings using Power BI dashboards.</li>
-    </ul>
-  </div>
-
-  <div class="insight">
-    <strong>Key Insights:</strong>
-    <ul>
-      <li>Business-class passengers reported higher satisfaction overall but showed sharper dissatisfaction
-          when delays exceeded acceptable thresholds.</li>
-      <li>Flight delays had a strong negative impact on passenger satisfaction across all travel classes.</li>
-      <li>Poor WiFi quality and seat comfort significantly contributed to lower satisfaction scores,
-          especially during delayed flights.</li>
-    </ul>
-  </div>
-
-  <div class="recommendations">
-    <strong>Recommendations:</strong>
-    <ul>
-      <li>Prioritize delay reduction strategies for high-traffic routes and peak travel periods.</li>
-      <li>Improve communication and compensation policies for delayed business-class passengers.</li>
-      <li>Invest in reliable onboard WiFi and improved seating comfort to reduce dissatisfaction during unavoidable delays.</li>
-    </ul>
-  </div>
-
-  <div class="card-buttons">
-    <a class="btn" href="https://github.com/Juliet-Erefa/juliet-erefa.github.io/tree/main/Airline_Project" target="_blank">
-      View on GitHub
-    </a>
-
-    <a class="btn btn-download" href="https://github.com/Juliet-Erefa/juliet-erefa.github.io/raw/main/Airline_Project/Airline%20Passenger%20Satisfaction%20Dashboard.pbix" target="_blank">
-      📥 Download Power BI
-    </a>
-
-    <a class="btn" href="https://github.com/Juliet-Erefa/juliet-erefa.github.io/blob/main/Airline_Project/Data%20Cleaning%20Analysis.ipynb" target="_blank">
-      Open Python Notebook
-    </a>
-
-    <a class="btn btn-download" href="https://github.com/Juliet-Erefa/juliet-erefa.github.io/raw/main/Airline_Project/cleaned_airline_data.csv" target="_blank">
-      📥 Download Cleaned Data
-    </a>
-  </div>
+<div class="btns">
+<a class="btn" href="https://github.com/Juliet-Erefa/juliet-erefa.github.io/tree/main/Airline_Project" target="_blank">GitHub</a>
+<a class="btn download" href="https://github.com/Juliet-Erefa/juliet-erefa.github.io/raw/main/Airline_Project/Airline%20Passenger%20Satisfaction%20Dashboard.pbix" target="_blank">Power BI</a>
 </div>
-      
-        <div class="card">
-  <h3>Retail Sales Performance and Customer Insights (SQL + Power BI)</h3>
-
-  <div class="meta">Tools: MySQL Workbench, Power BI</div>
-
-  <p>
-    This project analyzes retail sales data to understand revenue drivers, customer behavior,
-    and category performance. The goal was to generate insights that can help retail businesses
-    improve sales strategy, customer targeting, and revenue growth.
-  </p>
-
-  <div class="problem-context">
-    <strong>Problem Context:</strong>
-    Retail businesses often struggle to identify which product categories and customer segments
-    contribute most to revenue, as well as when sales peak. Without this clarity, marketing and
-    inventory decisions may be inefficient.
-  </div>
-
-  <div class="business-questions">
-    <strong>Business Questions:</strong>
-    <ul>
-      <li>Which product categories generate the highest sales?</li>
-      <li>Which customer segments contribute most to revenue?</li>
-      <li>Do sales perform better on weekdays or weekends?</li>
-      <li>How important are returning customers to total sales?</li>
-    </ul>
-  </div>
-
-  <div class="approach">
-    <strong>Approach:</strong>
-    <ul>
-      <li>Cleaned and explored retail sales data using SQL.</li>
-      <li>Analyzed sales trends by product category, customer demographics, and time.</li>
-      <li>Identified high-performing segments and repeat customer contribution.</li>
-      <li>Built an interactive Power BI dashboard to visualize key insights.</li>
-    </ul>
-  </div>
-
-  <div class="insight">
-    <strong>Key Insights:</strong>
-    <ul>
-      <li>Electronics and Clothing were the top revenue-generating categories.</li>
-      <li>Female customers aged 25–40 made the highest number of purchases.</li>
-      <li>Weekend sales consistently outperformed weekday sales.</li>
-      <li>Returning customers contributed significantly to total revenue.</li>
-    </ul>
-  </div>
-
-  <div class="recommendations">
-    <strong>Recommendations:</strong>
-    <ul>
-      <li>Increase inventory and promotions for high-performing categories like Electronics and Clothing.</li>
-      <li>Design targeted marketing campaigns for high-value customer segments.</li>
-      <li>Run weekend-specific promotions to maximize sales.</li>
-      <li>Introduce loyalty programs to encourage repeat purchases.</li>
-    </ul>
-  </div>
-
-  <div class="card-buttons">
-    <a class="btn" href="https://github.com/juliet-erefa/juliet-erefa.github.io/tree/main" target="_blank">
-      View on GitHub
-    </a>
-    <a class="btn btn-download" href="https://github.com/juliet-erefa/juliet-erefa.github.io/raw/main/Retail_Sales_Visuals.pbix" target="_blank">
-      📥 Download Power BI
-    </a>
-  </div>
+</div>
 </div>
 
-        <div class="card">
-  <h3>Workforce Planning and Layoffs Trend Analysis (SQL)</h3>
+<!-- Retail -->
+<div class="card">
+<img src="images/retail_dashboard.png">
+<div class="card-content">
+<h3>Retail Sales Performance Analysis</h3>
+<div class="meta">SQL • Power BI</div>
+<p>Identified revenue drivers, customer segments, and sales trends for retail decision-making.</p>
 
-  <div class="meta">Tools: MySQL Workbench</div>
+<details>
+<summary>View details</summary>
+<ul>
+<li>Electronics and Clothing generated the highest revenue.</li>
+<li>Weekend sales outperformed weekdays.</li>
+<li>Returning customers contributed significantly.</li>
+</ul>
+</details>
 
-  <p>
-    This project analyzes global layoffs data to understand workforce reduction trends across
-    industries, companies, and regions. The goal was to generate insights that can support
-    strategic workforce planning, cost optimization, and risk awareness for organizations.
-  </p>
-
-  <div class="problem-context">
-    <strong>Problem Context:</strong>
-    Economic uncertainty and rapid industry changes have forced many organizations to downsize.
-    Without data-driven insights, companies risk making reactive workforce decisions that may
-    negatively impact long-term performance and employee morale.
-  </div>
-
-  <div class="business-questions">
-    <strong>Business Questions:</strong>
-    <ul>
-      <li>Which industries experienced the highest number of layoffs?</li>
-      <li>Which countries were most affected by workforce reductions?</li>
-      <li>How did layoffs trend over time between 2020 and 2023?</li>
-      <li>What patterns can organizations learn to improve workforce planning?</li>
-    </ul>
-  </div>
-
-  <div class="approach">
-    <strong>Approach:</strong>
-    <ul>
-      <li>Cleaned and standardized global layoffs data using SQL.</li>
-      <li>Analyzed layoffs by industry, company, country, and year.</li>
-      <li>Identified periods and sectors with the highest workforce reductions.</li>
-      <li>Summarized findings to support strategic workforce insights.</li>
-    </ul>
-  </div>
-
-  <div class="insight">
-    <strong>Key Insights:</strong>
-    <ul>
-      <li>Layoffs increased significantly between 2020 and 2023.</li>
-      <li>The technology and startup sectors were the most affected.</li>
-      <li>The United States recorded the highest number of layoffs globally.</li>
-      <li>Layoffs often coincided with periods of economic uncertainty.</li>
-    </ul>
-  </div>
-
-  <div class="recommendations">
-    <strong>Recommendations:</strong>
-    <ul>
-      <li>Organizations should strengthen workforce forecasting during economic uncertainty.</li>
-      <li>Diversifying revenue streams may reduce the need for large-scale layoffs.</li>
-      <li>Proactive workforce planning can help companies manage costs while retaining key talent.</li>
-    </ul>
-  </div>
-
-  <div class="card-buttons">
-    <a class="btn" href="https://github.com/juliet-erefa/juliet-erefa.github.io/blob/main/Data%20Cleaning%20(World%20Layoffs).sql" target="_blank">
-      View on GitHub
-    </a>
-    <a class="btn btn-download" href="https://github.com/juliet-erefa/juliet-erefa.github.io/raw/main/Data%20Cleaning%20(World%20Layoffs).sql" target="_blank">
-      📥 Download SQL File
-    </a>
-  </div>
+<div class="btns">
+<a class="btn" href="https://github.com/juliet-erefa/juliet-erefa.github.io" target="_blank">GitHub</a>
+<a class="btn download" href="https://github.com/juliet-erefa/juliet-erefa.github.io/raw/main/Retail_Sales_Visuals.pbix" target="_blank">Power BI</a>
+</div>
+</div>
 </div>
 
+<!-- Layoffs -->
+<div class="card">
+<img src="images/layoffs_sql.png">
+<div class="card-content">
+<h3>Global Layoffs Trend Analysis</h3>
+<div class="meta">SQL</div>
+<p>Explored global layoffs data to uncover workforce reduction trends.</p>
 
-        <div class="card">
-          <h3>Data Professionals Survey (Power BI)</h3>
-          <div class="meta">Tools: Power BI</div>
-          <p>Analyzed a survey dataset to uncover insights on salaries, work-life balance, and job satisfaction among data professionals.</p>
-          <div class="insight"><strong>Insights:</strong> Python, SQL, and Power BI are among the most commonly used tools; more experienced respondents generally earn higher salaries; and the United States had the largest respondent base.</div>
-          <div class="card-buttons">
-            <a class="btn" href="https://github.com/juliet-erefa/juliet-erefa.github.io/tree/main" target="_blank">View on GitHub</a>
-            <a class="btn btn-download" href="https://github.com/juliet-erefa/juliet-erefa.github.io/raw/main/Power%20Bi%20Project.pbix" target="_blank">📥 Download File</a>
-          </div>
-        </div>
+<details>
+<summary>View details</summary>
+<ul>
+<li>Technology sector was most affected.</li>
+<li>Layoffs increased sharply post-2020.</li>
+<li>Economic uncertainty correlated with spikes.</li>
+</ul>
+</details>
 
-      
+<div class="btns">
+<a class="btn" href="https://github.com/juliet-erefa/juliet-erefa.github.io/blob/main/Data%20Cleaning%20(World%20Layoffs).sql" target="_blank">SQL File</a>
+</div>
+</div>
+</div>
 
-        </div>
+<!-- Survey -->
+<div class="card">
+<img src="images/data_professionals_dashboard.png">
+<div class="card-content">
+<h3>Data Professionals Survey Analysis</h3>
+<div class="meta">Power BI</div>
+<p>Analyzed survey data to understand salaries, tools, and job satisfaction.</p>
 
-      </div>
-    </section>
+<details>
+<summary>View details</summary>
+<ul>
+<li>Python, SQL, and Power BI dominated tool usage.</li>
+<li>Higher experience correlated with higher salaries.</li>
+<li>US had the highest respondent count.</li>
+</ul>
+</details>
 
-    <!-- Contact -->
-    <section style="margin-top:22px">
-      <h2 class="section">Contact</h2>
-      <div class="card" style="display:flex;align-items:center;gap:18px;flex-direction:column;text-align:center">
-        <div class="contact">
-          <a href="mailto:julieterefa@gmail.com">✉️ julieterefa@gmail.com</a>
-        </div>
-        <div class="contact">
-          <a href="https://www.linkedin.com/in/oyeindiepreye-erefa-928b8619b" target="_blank">💼 LinkedIn</a>
-          <span style="width:12px;display:inline-block"></span>
-          <a href="https://github.com/juliet-erefa" target="_blank">💻 GitHub</a>
-        </div>
-      </div>
-    </section>
+<div class="btns">
+<a class="btn download" href="https://github.com/juliet-erefa/juliet-erefa.github.io/raw/main/Power%20Bi%20Project.pbix" target="_blank">Power BI</a>
+</div>
+</div>
+</div>
 
-    <footer>
-      <p>&copy; 2025 Erefa Oyeindiepreye Juliet | Last updated: October 2025</p>
-    </footer>
+</div>
 
-  </div>
+<footer>
+&copy; 2025 Erefa O. Juliet | Last updated: October 2025
+</footer>
+
+</div>
 </body>
 </html>
+
+   
+   
+   
+    
+   
+
+ 
+      
+
+    
+  
+
+
+ 
