@@ -1,291 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Erefa O. Juliet | Data Analyst Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erefa O. Juliet | Data Analyst Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-:root{
-  --accent:#0097A7;
-  --accent-hover:#007C91;
-  --bg:#f5f7f8;
-  --card:#ffffff;
-  --muted:#6b7280;
-  --shadow:0 8px 24px rgba(0,0,0,0.06);
-  --radius:14px;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f5f7fa;
+      color: #0f172a;
+      line-height: 1.6;
+    }
 
-body{
-  margin:0;
-  font-family:Inter, system-ui;
-  background:var(--bg);
-  color:#0f172a;
-}
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+    }
 
-.container{
-  max-width:1100px;
-  margin:40px auto;
-  padding:20px;
-}
+    /* HEADER */
+    header {
+      background: linear-gradient(90deg, #0097A7, #00ACC1);
+      color: white;
+      border-radius: 16px;
+      padding: 30px;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
 
-header{
-  background:linear-gradient(90deg,var(--accent),#00ACC1);
-  border-radius:18px;
-  padding:30px;
-  color:white;
-  display:flex;
-  gap:24px;
-  align-items:center;
-}
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255,255,255,0.3);
+    }
 
-.photo{
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  overflow:hidden;
-  border:4px solid rgba(255,255,255,0.25);
-}
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
 
-.photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
+    header p {
+      margin: 6px 0 12px;
+      max-width: 700px;
+    }
 
-h1{margin:0;font-size:1.8rem}
-.title{margin:6px 0 12px;font-weight:500}
+    .cv-btn {
+      display: inline-block;
+      background: white;
+      color: #0097A7;
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-.cv-btn{
-  display:inline-block;
-  background:white;
-  color:var(--accent);
-  padding:10px 16px;
-  border-radius:10px;
-  font-weight:600;
-  text-decoration:none;
-}
+    /* SECTIONS */
+    h2 {
+      margin: 50px 0 20px;
+      color: #083344;
+    }
 
-.section-title{
-  margin:40px 0 16px;
-  font-size:1.4rem;
-  color:#083344;
-}
+    /* PROJECTS */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
 
-.projects{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:24px;
-}
+    .project-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
 
-.card{
-  background:var(--card);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  overflow:hidden;
-}
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
 
-.card img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-}
+    .project-content {
+      padding: 20px;
+    }
 
-.card-content{
-  padding:20px;
-}
+    .project-content h3 {
+      margin-top: 0;
+      color: #007C91;
+    }
 
-.card h3{
-  margin:0 0 6px;
-  color:var(--accent-hover);
-}
+    details {
+      margin-top: 12px;
+    }
 
-.meta{
-  font-size:0.9rem;
-  color:var(--muted);
-  margin-bottom:10px;
-}
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #0097A7;
+    }
 
-details summary{
-  cursor:pointer;
-  font-weight:600;
-  margin:12px 0;
-}
+    ul {
+      padding-left: 18px;
+    }
 
-.btns{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:12px;
-}
+    .btn {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 9px 14px;
+      border-radius: 8px;
+      background: #0097A7;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
 
-.btn{
-  padding:8px 14px;
-  border-radius:8px;
-  border:1px solid #e6eef0;
-  background:#fafbfb;
-  text-decoration:none;
-  color:#374151;
-  font-weight:600;
-}
+    /* CONTACT */
+    .contact {
+      text-align: center;
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+    }
 
-.btn:hover{
-  background:#f2f7f7;
-  border-color:var(--accent);
-  color:var(--accent);
-}
+    .contact a {
+      display: inline-block;
+      margin: 8px 14px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #0097A7;
+    }
 
-.download{
-  background:var(--accent);
-  color:white;
-  border:none;
-}
-
-footer{
-  margin:50px 0 20px;
-  text-align:center;
-  color:var(--muted);
-  font-size:0.9rem;
-}
-</style>
+    footer {
+      margin: 40px 0 10px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 
 <body>
 <div class="container">
 
-<header>
-  <div class="photo">
+  <!-- HEADER -->
+  <header>
     <img src="profile.jpg" alt="Erefa Juliet">
-  </div>
-  <div>
-    <h1>Erefa Oyeindiepreye Juliet</h1>
-    <div class="title">Data Analyst | SQL | Python | Power BI | Excel</div>
-    <p>I analyze data to uncover insights that support business decisions, improve operations, and enhance customer experience.</p>
-    <a class="cv-btn" href="Erefa_Juliet_Resume.pdf" target="_blank">📄 View CV</a>
-  </div>
-</header>
+    <div>
+      <h1>Erefa Oyeindiepreye Juliet</h1>
+      <strong>Data Analyst | SQL | Python | Power BI | Excel</strong>
+      <p>
+        Data analyst focused on transforming raw data into meaningful insights
+        that support decision-making, improve operational efficiency,
+        and enhance customer experience.
+      </p>
+      <a class="cv-btn" href="Erefa_Juliet_Resume.pdf" target="_blank">📄 View CV</a>
+    </div>
+  </header>
 
-<h2 class="section-title">Projects</h2>
+  <!-- PROJECTS -->
+  <h2>Projects</h2>
+  <section class="projects">
 
-<div class="projects">
+    <!-- 1. Airline Project -->
+    <div class="project-card">
+      <img src="images/airline.png" alt="Airline Project">
+      <div class="project-content">
+        <h3>Airline Passenger Satisfaction Analysis</h3>
+        <p>Analysis of airline passenger data to understand the impact of delays and service quality on satisfaction.</p>
 
-<!-- Airline -->
-<div class="card">
-<img src="images/airline_dashboard.png">
-<div class="card-content">
-<h3>Airline Passenger Satisfaction Analysis</h3>
-<div class="meta">Python • Power BI</div>
-<p>Analyzed airline passenger data to understand how delays and service quality impact satisfaction.</p>
+        <details>
+          <summary>View Details</summary>
+          <h4>Key Insights</h4>
+          <ul>
+            <li>Flight delays significantly reduced satisfaction across all classes.</li>
+            <li>Business-class passengers had higher expectations and sharper dissatisfaction.</li>
+            <li>WiFi quality and seat comfort were major dissatisfaction drivers.</li>
+          </ul>
 
-<details>
-<summary>View details</summary>
-<ul>
-<li>Business travelers showed higher expectations and sharper dissatisfaction during delays.</li>
-<li>WiFi quality and seat comfort strongly influenced satisfaction.</li>
-<li>Delay reduction and service improvements were recommended.</li>
-</ul>
-</details>
+          <h4>Recommendations</h4>
+          <ul>
+            <li>Improve delay management and passenger communication.</li>
+            <li>Enhance in-flight comfort and connectivity.</li>
+          </ul>
+        </details>
+      </div>
+    </div>
 
-<div class="btns">
-<a class="btn" href="https://github.com/Juliet-Erefa/juliet-erefa.github.io/tree/main/Airline_Project" target="_blank">GitHub</a>
-<a class="btn download" href="https://github.com/Juliet-Erefa/juliet-erefa.github.io/raw/main/Airline_Project/Airline%20Passenger%20Satisfaction%20Dashboard.pbix" target="_blank">Power BI</a>
-</div>
-</div>
-</div>
+    <!-- 2. Retail Sales -->
+    <div class="project-card">
+      <img src="images/retail.png" alt="Retail Sales">
+      <div class="project-content">
+        <h3>Retail Sales Performance Analysis</h3>
+        <p>SQL and Power BI analysis of retail sales to identify revenue drivers and customer behavior.</p>
 
-<!-- Retail -->
-<div class="card">
-<img src="images/retail_dashboard.png">
-<div class="card-content">
-<h3>Retail Sales Performance Analysis</h3>
-<div class="meta">SQL • Power BI</div>
-<p>Identified revenue drivers, customer segments, and sales trends for retail decision-making.</p>
+        <details>
+          <summary>View Details</summary>
+          <h4>Key Insights</h4>
+          <ul>
+            <li>Electronics and clothing generated the highest revenue.</li>
+            <li>Weekend sales consistently outperformed weekdays.</li>
+            <li>Returning customers contributed a large share of revenue.</li>
+          </ul>
 
-<details>
-<summary>View details</summary>
-<ul>
-<li>Electronics and Clothing generated the highest revenue.</li>
-<li>Weekend sales outperformed weekdays.</li>
-<li>Returning customers contributed significantly.</li>
-</ul>
-</details>
+          <h4>Recommendations</h4>
+          <ul>
+            <li>Focus promotions on high-performing categories.</li>
+            <li>Introduce loyalty programs to boost repeat sales.</li>
+          </ul>
+        </details>
+      </div>
+    </div>
 
-<div class="btns">
-<a class="btn" href="https://github.com/juliet-erefa/juliet-erefa.github.io" target="_blank">GitHub</a>
-<a class="btn download" href="https://github.com/juliet-erefa/juliet-erefa.github.io/raw/main/Retail_Sales_Visuals.pbix" target="_blank">Power BI</a>
-</div>
-</div>
-</div>
+    <!-- 3. Layoffs -->
+    <div class="project-card">
+      <img src="images/layoffs.png" alt="Layoffs Analysis">
+      <div class="project-content">
+        <h3>Workforce Planning & Layoffs Analysis</h3>
+        <p>SQL-based analysis of global layoffs trends across industries and countries.</p>
 
-<!-- Layoffs -->
-<div class="card">
-<img src="images/layoffs_sql.png">
-<div class="card-content">
-<h3>Global Layoffs Trend Analysis</h3>
-<div class="meta">SQL</div>
-<p>Explored global layoffs data to uncover workforce reduction trends.</p>
+        <details>
+          <summary>View Details</summary>
+          <h4>Key Insights</h4>
+          <ul>
+            <li>Technology sector recorded the highest layoffs.</li>
+            <li>Layoffs peaked during economic uncertainty.</li>
+          </ul>
 
-<details>
-<summary>View details</summary>
-<ul>
-<li>Technology sector was most affected.</li>
-<li>Layoffs increased sharply post-2020.</li>
-<li>Economic uncertainty correlated with spikes.</li>
-</ul>
-</details>
+          <h4>Recommendations</h4>
+          <ul>
+            <li>Strengthen workforce forecasting.</li>
+            <li>Diversify revenue to reduce layoff risks.</li>
+          </ul>
+        </details>
+      </div>
+    </div>
 
-<div class="btns">
-<a class="btn" href="https://github.com/juliet-erefa/juliet-erefa.github.io/blob/main/Data%20Cleaning%20(World%20Layoffs).sql" target="_blank">SQL File</a>
-</div>
-</div>
-</div>
+    <!-- 4. Survey -->
+    <div class="project-card">
+      <img src="images/survey.png" alt="Survey Project">
+      <div class="project-content">
+        <h3>Data Professionals Survey Analysis</h3>
+        <p>Power BI analysis of survey data covering salary, tools, and job satisfaction.</p>
 
-<!-- Survey -->
-<div class="card">
-<img src="images/data_professionals_dashboard.png">
-<div class="card-content">
-<h3>Data Professionals Survey Analysis</h3>
-<div class="meta">Power BI</div>
-<p>Analyzed survey data to understand salaries, tools, and job satisfaction.</p>
+        <details>
+          <summary>View Details</summary>
+          <h4>Key Insights</h4>
+          <ul>
+            <li>Python, SQL, and Power BI were the most used tools.</li>
+            <li>Higher experience correlated with higher salaries.</li>
+          </ul>
 
-<details>
-<summary>View details</summary>
-<ul>
-<li>Python, SQL, and Power BI dominated tool usage.</li>
-<li>Higher experience correlated with higher salaries.</li>
-<li>US had the highest respondent count.</li>
-</ul>
-</details>
+          <h4>Recommendations</h4>
+          <ul>
+            <li>Upskill in high-demand tools.</li>
+            <li>Organizations should invest in employee development.</li>
+          </ul>
+        </details>
+      </div>
+    </div>
 
-<div class="btns">
-<a class="btn download" href="https://github.com/juliet-erefa/juliet-erefa.github.io/raw/main/Power%20Bi%20Project.pbix" target="_blank">Power BI</a>
-</div>
-</div>
-</div>
+  </section>
 
-</div>
+  <!-- CONTACT -->
+  <h2>Contact</h2>
+  <section class="contact">
+    <a href="mailto:julieterefa@gmail.com">✉️ julieterefa@gmail.com</a>
+    <a href="https://www.linkedin.com/in/oyeindiepreye-erefa-928b8619b" target="_blank">💼 LinkedIn</a>
+    <a href="https://github.com/juliet-erefa" target="_blank">💻 GitHub</a>
+  </section>
 
-<footer>
-&copy; 2025 Erefa O. Juliet | Last updated: October 2025
-</footer>
+  <footer>
+    © 2025 Erefa Oyeindiepreye Juliet
+  </footer>
 
 </div>
 </body>
 </html>
 
-   
-   
-   
-    
-   
-
- 
-      
-
-    
-  
-
-
- 
